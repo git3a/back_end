@@ -16,5 +16,6 @@ def get(request):
         user_dict['email'] = user.email
         user_dict['sex'] = user.sex
 
+    print("test")
     return HttpResponse(json.dumps(user_dict),content_type="application/json")
 
