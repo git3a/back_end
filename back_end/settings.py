@@ -26,7 +26,7 @@ SECRET_KEY = 'r&vae246ccc__n@#=$qnu6r63^-izshlk#(42m_2y_(b2i@52+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','192.168.1.45']
 
 
 # Application definition
@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'test',  # データベース名
         'USER': 'root',  # ユーザ名
-        'PASSWORD': '1234',  # パスワード
+        'PASSWORD': '123',  # パスワード
         'HOST': 'localhost',  # MariaDBがあるサーバのIPアドレスやホストを。空欄はローカルホスト
         'PORT': '3306',  # 空欄はデフォルトポートの3306
     }
