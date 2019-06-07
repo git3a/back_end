@@ -26,7 +26,7 @@ SECRET_KEY = 'r&vae246ccc__n@#=$qnu6r63^-izshlk#(42m_2y_(b2i@52+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1','192.168.1.45']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'back_end.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',  # データベース名
+        'NAME': 'haochidb',  # データベース名
         'USER': 'root',  # ユーザ名
-        'PASSWORD': '123',  # パスワード
-        'HOST': 'localhost',  # MariaDBがあるサーバのIPアドレスやホストを。空欄はローカルホスト
+        'PASSWORD': 'Tfzn3FgkWDU2',  # パスワード
+        'HOST': '/opt/bitnami/mysql/tmp/mysql.sock',  # MariaDBがあるサーバのIPアドレスやホストを。空欄はローカルホスト
         'PORT': '3306',  # 空欄はデフォルトポートの3306
     }
 
