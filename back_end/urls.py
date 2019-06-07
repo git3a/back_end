@@ -22,6 +22,7 @@ from User import get_user
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('getrecipe/', get_recipe.get),
+    path('getrecipe/', get_recipe.getRandonRecipe),
+	path('getrecipebyid/', get_recipe.getRecipeById),
     path('getuser/', get_user.get),
 ]
