@@ -84,6 +84,7 @@ DATABASES = {
         'USER': 'root',  # ユーザ名
         'PASSWORD': 'Tfzn3FgkWDU2',  # パスワード
 		'CHARSET' : 'utf8',
+		'COLLATION' : 'utf8_general_ci',
         'HOST': '/opt/bitnami/mysql/tmp/mysql.sock',  # MariaDBがあるサーバのIPアドレスやホストを。空欄はローカルホスト
         'PORT': '3306',  # 空欄はデフォルトポートの3306
     }
