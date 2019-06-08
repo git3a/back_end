@@ -83,6 +83,7 @@ DATABASES = {
         'NAME': 'haochidb',  # データベース名
         'USER': 'root',  # ユーザ名
         'PASSWORD': 'Tfzn3FgkWDU2',  # パスワード
+		'CHARSET' : 'utf8',
         'HOST': '/opt/bitnami/mysql/tmp/mysql.sock',  # MariaDBがあるサーバのIPアドレスやホストを。空欄はローカルホスト
         'PORT': '3306',  # 空欄はデフォルトポートの3306
     }
@@ -118,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'utf8'
 
 TIME_ZONE = 'UTC'
 
