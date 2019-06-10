@@ -12,19 +12,19 @@ class UserEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self,obj)
 # Create your models here.
 class Recipe(models.Model):
-    # Recipeid: INTEGRAL型で，主キー
-
-    #recipeid = models.IntegerField(primary_key=True)
-    # 名前：文字列100桁
-    name = models.TextField()
-    # 図
-    image = models.TextField()
-    # material
-    material = models.TextField()
-    # 量
-    amount = models.TextField()
-    # ステップ
-    step = models.TextField()
+	# Recipeid: INTEGRAL型で，主キー
+	
+	#recipeid = models.IntegerField(primary_key=True)
+	# 名前：文字列100桁
+	name = models.TextField()
+	# 図
+	image = models.TextField()
+	# material
+	material = models.TextField()
+	# 量
+	amount = models.TextField()
+	# ステップ
+	step = models.TextField()
 	time = models.TextField()
-    # User
-    #User = models.ForeignKey(UserInfo, on_delete=models.CASCADE)
+	# User
+	#User = models.ForeignKey(UserInfo, on_delete=models.CASCADE)
