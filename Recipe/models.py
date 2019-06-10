@@ -25,5 +25,6 @@ class Recipe(models.Model):
     amount = models.TextField()
     # ステップ
     step = models.TextField()
+	time = models.TextField()
     # User
     #User = models.ForeignKey(UserInfo, on_delete=models.CASCADE)
