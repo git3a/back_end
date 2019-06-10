@@ -14,7 +14,7 @@ def get(request):
 		#user_dict['userid'] = user.userid
 		user_dict['user'] = user.user
 		user_dict['pwd'] = user.pwd
-		#user_dict['email'] = user.email
+		user_dict['email'] = user.email
 		#user_dict['sex'] = user.sex
 
 	
