@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from Recipe import get_recipe
 from User import get_user
-
+from User import insert_user
 #from User import get_user
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('getrecipe/', get_recipe.getRandonRecipe),
+	path('admin/', admin.site.urls),
+	path('getrecipe/', get_recipe.getRandonRecipe),
 	path('getrecipebyid/', get_recipe.getRecipeById),
-    path('getuser/', get_user.get),
+	path('getuser/', get_user.get),
+	path('insert/', insert_user.insert),
 ]

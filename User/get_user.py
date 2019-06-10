@@ -5,17 +5,18 @@ import json
 
 
 def get(request):
-    #user_list = []
-    user_dict = {}
-    users = UserInfo.objects.all()[:1]
-    for user in users:
-        #user_dict = {}
-        user_dict['userid'] = user.userid
-        user_dict['user'] = user.user
-        user_dict['pwd'] = user.pwd
-        user_dict['email'] = user.email
-        user_dict['sex'] = user.sex
+	#user_list = []
+	guser = request.GET.get("user")
+	user_dict = {}
+	users = UserInfo.objects.filter(user = guser)
+	for user in users:
+		#user_dict = {}
+		#user_dict['userid'] = user.userid
+		user_dict['user'] = user.user
+		user_dict['pwd'] = user.pwd
+		#user_dict['email'] = user.email
+		#user_dict['sex'] = user.sex
 
-    print("test")
-    return HttpResponse(json.dumps(user_dict),content_type="application/json")
+	
+	return HttpResponse(json.dumps(user_dict,ensure_ascii=False),content_type="application/json")
 

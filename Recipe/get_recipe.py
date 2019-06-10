@@ -14,10 +14,10 @@ class UserEncoder(json.JSONEncoder):
 
 def getRandonRecipe(request):
     #recipe_list = []
-	recipe_dict = {'id':[],'name':[], 'image':[], 'material':[], 'amount':[], 'step':[]}
+	recipe_dict = {'id':[],'name':[], 'image':[]}
 	h = set()
 	while (len(h) < 6):
-		h.add(random.randint(1,50))
+		h.add(random.randint(1,100))
 	for index in h:
 		
 		recipes = Recipe.objects.filter(id = index)
