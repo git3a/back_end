@@ -44,6 +44,7 @@ def getRecipeById(request):
 		recipe_dict['material'] = (recipe.material)
 		recipe_dict['amount'] = (recipe.amount)
 		recipe_dict['step'] = (recipe.step)
+		recipe_dict['time'] = recipe.time
 		#recipe_dict['User'] = recipe.User
 		#recipe_list.append(recipe_dict)
 		#print(recipe_dict['userid'])
