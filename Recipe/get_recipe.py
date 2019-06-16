@@ -51,3 +51,16 @@ def getRecipeById(request):
 	#return HttpResponse(json.dump(recipe_list, ensure_ascii=False),)
 	return HttpResponse(json.dumps(recipe_dict,cls=UserEncoder,ensure_ascii=False), content_type="application/json")
 
+def getRecipeByName(request):
+
+	recipe_dict = {'id':[],'name':[], 'image':[]}
+	searchWord = request.GET.get("searchWord")
+	print(searchWord)
+	recipes = Recipe.objects.filter(name__contains = searchWord)
+	for recipe in recipes:
+		recipe_dict['id'].append(recipe.id)
+		recipe_dict['name'].append(recipe.name)
+		recipe_dict['image'].append(recipe.image)
+	#return HttpResponse(json.dump(recipe_list, ensure_ascii=False),)
+	return HttpResponse(json.dumps(recipe_dict,cls=UserEncoder,ensure_ascii=False), content_type="application/json")
+

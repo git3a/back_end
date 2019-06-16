@@ -24,6 +24,7 @@ urlpatterns = [
 	path('admin/', admin.site.urls),
 	path('getrecipe/', get_recipe.getRandonRecipe),
 	path('getrecipebyid/', get_recipe.getRecipeById),
+	path('getrecipebyname/', get_recipe.getRecipeByName),
 	path('getuser/', get_user.get),
 	path('insert/', insert_user.insert),
 ]

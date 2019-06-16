@@ -78,26 +78,31 @@ WSGI_APPLICATION = 'back_end.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'haochidb',  # データベース名
-        'USER': 'root',  # ユーザ名
-        'PASSWORD': 'Tfzn3FgkWDU2',  # パスワード
+	'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': 'haochidb',  # データベース名
+		'USER': 'root',  # ユーザ名
+		'PASSWORD': 'Tfzn3FgkWDU2',  # パスワード
 		'CHARSET' : 'utf8',
 		'COLLATION' : 'utf8_general_ci',
-        'HOST': '/opt/bitnami/mysql/tmp/mysql.sock',  # MariaDBがあるサーバのIPアドレスやホストを。空欄はローカルホスト
-        'PORT': '3306',  # 空欄はデフォルトポートの3306
-    }
-
-
-  #  'default': {
-  #      'ENGINE': 'django.db.backends.sqlite3',
-  #      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-  #  }
-
-
+		'HOST': '/opt/bitnami/mysql/tmp/mysql.sock',  # MariaDBがあるサーバのIPアドレスやホストを。空欄はローカルホスト
+		'PORT': '3306',  # 空欄はデフォルトポートの3306
+	}
 }
-
+'''
+DATABASES = {
+	'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': 'haochidb',  # データベース名
+		'USER': 'root',  # ユーザ名
+		'PASSWORD': '1234',  # パスワード
+		'CHARSET' : 'utf8',
+		'COLLATION' : 'utf8_general_ci',
+		'HOST': 'localhost',  # MariaDBがあるサーバのIPアドレスやホストを。空欄はローカルホスト
+		'PORT': '3306',  # 空欄はデフォルトポートの3306
+	}
+}
+'''
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
