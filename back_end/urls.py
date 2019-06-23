@@ -18,6 +18,7 @@ from django.urls import path
 from Recipe import get_recipe
 from User import get_user
 from User import insert_user
+from image import uploadImage
 #from User import get_user
 
 urlpatterns = [
@@ -27,4 +28,5 @@ urlpatterns = [
 	path('getrecipebyname/', get_recipe.getRecipeByName),
 	path('getuser/', get_user.get),
 	path('insert/', insert_user.insert),
+	path('uploadImage', uploadImage.uploadImage),
 ]
