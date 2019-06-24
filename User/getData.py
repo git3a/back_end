@@ -34,8 +34,8 @@ def getFavorite(request):
 	userid = request.GET.get("id")
 	
 	user_dict = {'favorite':[]}
-	favorite = UserFavorite.objects.filter(userId = userid)
-	for recipeid in recipeIds:
+	favorites = UserFavorite.objects.filter(userId = userid)
+	for favorite in favorites:
 		#user_dict = {}
 		#user_dict['userid'] = user.userid
 		user_dict['favorite'].append(str(favorite.recipeId))
