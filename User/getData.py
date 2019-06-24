@@ -33,12 +33,12 @@ def getFavorite(request):
 	#user_list = []
 	userid = request.GET.get("id")
 	
-	user_dict = []
+	user_dict = {'favorite':[]}
 	recipeIds = UserFavorite.objects.filter(userId = userid)
 	for recipeid in recipeIds:
 		#user_dict = {}
 		#user_dict['userid'] = user.userid
-		user_dict.append(recipeid)
+		user_dict['favorite'].append(recipeid)
 		#user_dict['sex'] = user.sex
 	return HttpResponse(json.dumps(user_dict,ensure_ascii=False),content_type="application/json")
     

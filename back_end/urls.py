@@ -31,6 +31,7 @@ urlpatterns = [
     path('getFavoriteRecipeId/', getData.getFavorite),
 	path('insert/', insertData.insertUser),
 	path('insertList/', insertData.insertList), 
+	path('insertFavorite/', insertData.insertFavorite),
 	path('getList/', getData.getList),
 	path('uploadImage/', uploadImage.uploadImage),
 ]
