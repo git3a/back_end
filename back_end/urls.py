@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Recipe import get_recipe
-from User import get_user
-from User import insert_user
+from User import getData
+from User import insertData
+
 from image import uploadImage
 #from User import get_user
 
@@ -26,7 +27,10 @@ urlpatterns = [
 	path('getrecipe/', get_recipe.getRandonRecipe),
 	path('getrecipebyid/', get_recipe.getRecipeById),
 	path('getrecipebyname/', get_recipe.getRecipeByName),
-	path('getuser/', get_user.get),
-	path('insert/', insert_user.insert),
-	path('uploadImage', uploadImage.uploadImage),
+	path('getuser/', getData.getUser),
+    path('getFavoriteRecipeId/', getData.getFavorite),
+	path('insert/', insertData.insertUser),
+	path('insertList/', insertData.insertList), 
+	path('getList/', getData.getList),
+	path('uploadImage/', uploadImage.uploadImage),
 ]

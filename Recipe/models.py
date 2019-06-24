@@ -1,6 +1,4 @@
 from django.db import models
-
-from User.models import UserInfo
 import json
 
 
@@ -26,5 +24,3 @@ class Recipe(models.Model):
 	# ステップ
 	step = models.TextField()
 	time = models.TextField()
-	# User
-	#User = models.ForeignKey(UserInfo, on_delete=models.CASCADE)
