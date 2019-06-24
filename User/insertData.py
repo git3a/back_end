@@ -15,7 +15,7 @@ def insertUser(request):
 def insertFavorite(request):
 	userid = request.GET.get('userid')
 	recipeid = request.GET.get('recipeid')
-	data = UserFavorite(usertId = userid, recipeId = recipeid)
+	data = UserFavorite(userId = userid, recipeId = recipeid)
 	data.save()
 	return HttpResponse()
 	
