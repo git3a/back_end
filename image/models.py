@@ -6,13 +6,10 @@ class UploadImage(models.Model):
     class Meta:
         db_table = "upload_image"
 
-    id = models.IntegerField(primary_key=True)
     filename = models.CharField(max_length=252, default="")
     file_md5 = models.CharField(max_length=128)
     file_type = models.CharField(max_length=32)
     file_size = models.IntegerField()
-    created_at = models.DateTimeField(default=datetime.now)
-    updated_at = models.DateTimeField(default=datetime.now)
   
     # 我们还定义了通过文件md5值获取模型对象的类方法
     @classmethod
@@ -34,7 +31,7 @@ class UploadImage(models.Model):
     # 获取本图片在本地的位置，即你的文件系统的路径，图片会保存在这个路径下
     def getImagePath(self):
         filename = self.file_md5 + "." + self.file_type
-        path = settings.STATIC_URL + filename
+        path = settings.IMAGE_URL + filename
         return path
 
     def __str__(self):
