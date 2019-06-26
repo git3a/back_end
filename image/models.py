@@ -25,7 +25,7 @@ class UploadImage(models.Model):
     # 这些配置项我在Django项目的settings.py文件中进行配置
     def getImageUrl(self):
         filename = self.file_md5 + "." + self.file_type
-        url = 'http://'settings.WEB_HOST_NAME + settings.WEB_IMAGE_SERVER_PATH + filename
+        url = 'http://' + settings.WEB_HOST_NAME + settings.WEB_IMAGE_SERVER_PATH + filename
         return url
 
     # 获取本图片在本地的位置，即你的文件系统的路径，图片会保存在这个路径下
