@@ -100,6 +100,7 @@ DATABASES = {
 		'COLLATION' : 'utf8_general_ci',
 		'HOST': 'localhost',  # MariaDBがあるサーバのIPアドレスやホストを。空欄はローカルホスト
 		'PORT': '3306',  # 空欄はデフォルトポートの3306
+		'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
 	}
 }
 
