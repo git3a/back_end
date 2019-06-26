@@ -11,6 +11,13 @@ def insertUser(request):
 	data = UserInfo(user = guser, pwd = gpassword, email = gemail);
 	data.save()
 	return HttpResponse()
+
+def insertUserImage(request):
+	userid = request.GET.get('userid')
+	url = request.GET.get("url")
+	user = UserInfo.objects.get(id=userid)
+	user.touxiang = url
+	return HttpResponse()
 	
 def insertFavorite(request):
 	userid = request.GET.get('userid')
