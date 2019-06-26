@@ -17,6 +17,7 @@ def insertUserImage(request):
 	url = request.GET.get("url")
 	user = UserInfo.objects.get(id=userid)
 	user.touxiang = url
+	user.save()
 	return HttpResponse()
 	
 def insertFavorite(request):
