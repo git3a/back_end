@@ -141,6 +141,7 @@ USE_TZ = True
 IMAGE_URL = os.path.join(BASE_DIR, 'static/')
 
 STATIC_URL = ('/static/')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-WEB_HOST_NAME = '192.168.1.10:8000'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/'), ]
+#WEB_HOST_NAME = '192.168.1.10:8000'
+WEB_HOST_NAME = '35.188.105.219/back_end'
 WEB_IMAGE_SERVER_PATH = '/static/'
