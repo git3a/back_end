@@ -1,6 +1,7 @@
 from User.models import UserInfo
 from User.models import UserFavorite
 from User.models import UserList
+from User.models import UserRecipe
 
 from django.http import HttpResponse
 def insertUser(request):
@@ -35,5 +36,17 @@ def insertList(request):
 	print(userid)
 	print(recipeid)
 	data = UserList(userId = userid, recipeId = recipeid)
+	data.save()
+	return HttpResponse()
+
+def insertRecipe(request):
+
+	recipename = request.GET.get("name")
+	recipematerial = request.GET.get("material")
+	recipestep = request.GET.get("steps")
+	print(recipename)
+	print(recipematerial)
+	print(recipestep)
+	data = UserRecipe(name=recipename, material= recipematerial, steps=recipestep)
 	data.save()
 	return HttpResponse()

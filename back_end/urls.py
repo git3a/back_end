@@ -33,6 +33,7 @@ urlpatterns = [
 	path('insertList/', insertData.insertList), 
 	path('insertFavorite/', insertData.insertFavorite),
 	path('insertTouxing/', insertData.insertUserImage),
+	path('insertRecipe/', insertData.insertRecipe),
 	path('getList/', getData.getList),
 	path('uploadImage/', uploadImage.uploadImage),
 ]
