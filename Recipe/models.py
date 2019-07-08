@@ -24,3 +24,7 @@ class Recipe(models.Model):
 	# ステップ
 	step = models.TextField()
 	time = models.TextField()
+
+# class UserRecipe(models.Model):
+# 	userid
+# 	recipeid

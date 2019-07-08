@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Recipe import get_recipe
+from Recipe import insertRecipe
 from User import getData
 from User import insertData
+
 
 from image import uploadImage
 #from User import get_user
@@ -33,7 +35,7 @@ urlpatterns = [
 	path('insertList/', insertData.insertList), 
 	path('insertFavorite/', insertData.insertFavorite),
 	path('insertTouxing/', insertData.insertUserImage),
-	path('insertRecipe/', insertData.insertRecipe),
+	path('insertRecipe/', insertRecipe.insertRecipe),
 	path('getList/', getData.getList),
 	path('uploadImage/', uploadImage.uploadImage),
 ]

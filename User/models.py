@@ -19,19 +19,3 @@ class UserList(models.Model):
 	userId = models.BigIntegerField()
 	recipeId = models.BigIntegerField()
 
-
-class UserRecipe(models.Model):
-	# Recipeid: INTEGRAL型で，主キー
-
-	# recipeid = models.IntegerField(primary_key=True)
-	# 名前：文字列100桁
-	name = models.TextField()
-	# 図
-	#image = models.TextField()
-	# material
-	material = models.TextField()
-	# 量
-	#amount = models.TextField()
-	# ステップ
-	steps = models.TextField()
-	#time = models.TextField()
