@@ -51,6 +51,19 @@ def getRecipeById(request):
 	#return HttpResponse(json.dump(recipe_list, ensure_ascii=False),)
 	return HttpResponse(json.dumps(recipe_dict,cls=UserEncoder,ensure_ascii=False), content_type="application/json")
 
+def getRecipeByUserId(request):
+    #recipe_list = []
+	recipe_dict = {'id':[],'name':[], 'image':[]}
+	user_id = request.GET.get("id")
+	user = UserInfo.objects.get(id=user_id) # Get user_id instance
+	recipes= user.recipe_set.all()
+	for recipe in recipes:
+		recipe_dict['id'].append(recipe.id)
+		recipe_dict['name'].append(recipe.name)
+		recipe_dict['image'].append(recipe.image)
+	#return HttpResponse(json.dump(recipe_list, ensure_ascii=False),)
+	return HttpResponse(json.dumps(recipe_dict,cls=UserEncoder,ensure_ascii=False), content_type="application/json")
+
 def getRecipeByName(request):
 
 	recipe_dict = {'id':[],'name':[], 'image':[]}

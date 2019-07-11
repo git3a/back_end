@@ -28,6 +28,7 @@ urlpatterns = [
 	path('admin/', admin.site.urls),
 	path('getrecipe/', get_recipe.getRandonRecipe),
 	path('getrecipebyid/', get_recipe.getRecipeById),
+	path('getrecipebyUserid/', get_recipe.getRecipeByUserId),
 	path('getrecipebyname/', get_recipe.getRecipeByName),
 	path('getuser/', getData.getUser),
     path('getFavoriteRecipeId/', getData.getFavorite),
