@@ -4,10 +4,10 @@ from django.db import models
 class UserInfo(models.Model):
 
 	#userid = models.CharField(max_length=100)
-	user = models.CharField(max_length=64,unique=True)
-	pwd = models.CharField(max_length=64)
+	user = models.TextField(unique=True)
+	pwd = models.TextField()
 	email = models.EmailField(unique=True,default="@")
-	touxiang = models.TextField("")
+	touxiang = models.TextField(default="")
 	#sex = models.CharField(max_length=32, choices=gender, default="男")
 
 class UserFavorite(models.Model):
